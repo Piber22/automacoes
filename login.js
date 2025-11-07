@@ -1,43 +1,19 @@
 // Seleciona os botões
-const btnRecebimento = document.getElementById('recebimento');
-const btnEncarregadas = document.getElementById('encarregadas');
-const btnGestao = document.getElementById('gestao');
-const loginError = document.getElementById('login-error');
-const btnAlmoxarifado = document.getElementById('almoxarifado');
+const btnRecebimento = document.getElementById('longas');
+const btnEncarregadas = document.getElementById('pro');
 
 
-// Redirecionamento ao clicar em "Rouparia"
+
+// Redirecionamento ao clicar em "Longas"
 btnRecebimento.addEventListener('click', () => {
   loginError.textContent = ""; // limpa mensagem
-  window.location.href = "rouparia/rouparia.html"; // redireciona
+  window.location.href = "https://scripts-qe466xhvxsnhjd4af6qg8i.streamlit.app"; // redireciona
 });
 
-// Redirecionamento ao clicar em "Encarregadas"
+// Redirecionamento ao clicar em "Relatório"
 btnEncarregadas.addEventListener('click', () => {
   loginError.textContent = ""; // limpa mensagem
   window.location.href = "encarregadas/encarregadas.html"; // redireciona
 });
 
-// Redirecionamento ao clicar em "Almox"
-btnAlmoxarifado.addEventListener('click', () => {
-  loginError.textContent = ""; // limpa mensagem
-  window.location.href = "almoxarifado/almoxarifado.html"; // redireciona
-});
 
-// Redirecionamento ao clicar em "Gestão" com verificação de senha
-btnGestao.addEventListener('click', () => {
-  loginError.textContent = ""; // limpa mensagem
-
-  const senha = prompt("Digite a senha para acessar Gestão:");
-
-  if(senha === "1") { // aqui você define a senha desejada
-    window.location.href = "adm/gestao.html";
-  } else if (senha !== null) { // se não cancelar
-    loginError.textContent = "Senha incorreta! Acesso negado.";
-  }
-});
-
-// Função para exibir mensagem engraçada/profissional nos botões "Em breve"
-function mostrarMensagemBreve() {
-  loginError.textContent = "O planejador ainda não conseguiu chegar até aqui, em breve estará disponível 😉";
-}
